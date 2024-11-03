@@ -1,0 +1,83 @@
+@import "../../../styles/variables";
+
+.wrapper {
+  flex: 1;
+  background-color: $white;
+  border-radius: 20px;
+  max-height: 345px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 33%;
+  @media only screen and (min-width: 1920px) {
+    padding: 100px;
+    max-height: unset;
+  }
+  @media only screen and (max-width: 1024px) {
+    max-width: unset;
+  }
+  .title {
+    font-size: 34px;
+    font-weight: 700;
+    color: $dark-text;
+    margin: 0;
+  }
+
+  .eventList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    .eventWrap {
+      display: flex;
+      .verticalBar {
+        border-radius: 2px;
+        width: 5px;
+        background-color: $primary;
+        height: 100%;
+      }
+      .eventItem {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        padding-left: 10px;
+
+        .eventName {
+          font-size: 16px;
+          font-weight: 700;
+          color: $dark-text;
+          margin-bottom: 3px;
+        }
+
+        .eventTime {
+          font-size: 12px;
+          color: $text-grey;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .viewAllButton {
+    margin-top: auto;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    justify-content: flex-end;
+    &:hover {
+      color: darken($primary, 10%);
+    }
+
+    .arrowIcon {
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

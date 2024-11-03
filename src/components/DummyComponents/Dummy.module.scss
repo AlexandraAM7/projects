@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  @media only screen and (max-width: 1023px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  .right {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 75%;
+    position: relative;
+    padding-bottom: 200px;
+    overflow-y: auto;
+    min-height: 100vh;
+    @media only screen and (max-width: 1023px) {
+      width: 100%;
+      transition: margin-left 0.3s ease;
+    }
+  }
+}

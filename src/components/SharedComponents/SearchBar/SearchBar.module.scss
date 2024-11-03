@@ -1,0 +1,38 @@
+@import "../../../styles/variables";
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  line-height: 20px;
+  width: 220px;
+}
+
+.searchButton {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+}
+
+.searchInput {
+  color: $input-text;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 12px;
+  padding: 0;
+
+  &::placeholder {
+    color: $input-text;
+    font-weight: 400;
+  }
+}

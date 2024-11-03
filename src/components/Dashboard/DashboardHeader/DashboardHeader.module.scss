@@ -1,0 +1,104 @@
+@import "../../../styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 1023px) {
+    justify-content: center;
+  }
+  .card {
+    background-color: $white;
+    border-radius: 20px;
+    width: 24%;
+
+    height: auto;
+    max-height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @media only screen and (min-width: 1920px) {
+      padding: 30px;
+      max-height: unset;
+    }
+    @media only screen and (max-width: 1023px) {
+      width: 48%;
+      gap: 5px;
+      padding: 10px;;
+    }
+  }
+  .mSpentCardWrapper {
+    gap: 20px;
+  }
+  .activityCardWrapper {
+    background: $card-gradient;
+    .infoWrapper {
+      p {
+        color: $white;
+      }
+    }
+  }
+  .chart {
+    width: 30%;
+    height: 100%;
+  }
+
+  .infoWrapper {
+    p {
+      color: $text-grey;
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 5px;
+      @media only screen and (max-width: 1023px) {
+        font-size: 10px;
+      }
+    }
+    .amount,
+    .earnings,
+    .activity {
+      color: $dark-text;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 0;
+      @media only screen and (max-width: 1023px) {
+        font-size: 16px;
+      }
+    }
+    .activity {
+      color: $white;
+    }
+    .newClients {
+      color: $dark-text;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
+
+  .cardLogo {
+    width: 56px;
+    height: 56px;
+    @media only screen and (max-width: 1023px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .graph {
+    margin-left: -15px;
+    @media only screen and (max-width: 1023px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .chartGraph {
+    @media only screen and (max-width: 1023px) {
+      width: 46px;
+      height: 46px;
+    }
+  }
+}

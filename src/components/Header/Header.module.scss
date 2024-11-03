@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 120px 20px 20px;
+  @media only screen and (max-width: 1023px) {
+    align-items: center;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    .username {
+      font-size: 14px;
+      color: $text-grey;
+      line-height: 24px;
+    }
+    .welcomeMsg {
+      font-size: 34px;
+      color: $text-dark-blue;
+      line-height: 42px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding: 20px;
+
+    .left {
+      align-items: flex-start;
+      @media only screen and (max-width: 1023px) {
+        align-items: center;
+      }
+      .username {
+        font-size: 12px;
+      }
+      .welcomeMsg {
+        font-size: 24px;
+      }
+    }
+
+    .right {
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .left {
+      .username {
+        font-size: 10px;
+      }
+      .welcomeMsg {
+        font-size: 20px;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    @media only screen and (max-width: 1023px) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../styles/variables";
+
+.wrapper {
+  flex: 1;
+  background-color: $white;
+  border-radius: 20px;
+  height: auto;
+  max-height: 345px;
+  padding: 30px;
+  gap: 30px;
+  @media only screen and (min-width: 1920px) {
+    padding: 100px;
+    max-height: unset;
+  }
+  .redColor {
+    color: $red;
+  }
+  p {
+    margin: 0;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .topLeft {
+      color: $text-grey;
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      .amount {
+        color: $dark-text;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+    }
+    .topRight {
+      display: flex;
+      flex-direction: row;
+      color: $green;
+      font-weight: 700;
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: row;
+    color: $green;
+    align-items: center;
+    font-weight: 700;
+    margin-block: 20px;
+
+    .checkmark {
+      margin-right: 5px;
+    }
+  }
+}
